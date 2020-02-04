@@ -1,0 +1,107 @@
+<ion-header class="app-default-bar">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="primary-font bold">Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content (window:resize)="checkOnResize($event)">
+  <!-- Page Title Hides on mobile-->
+  <h1 class="primary-font page-title hide-on-mobile">Featured Items</h1>
+
+  <!-- Main Grid. Separates the slider and the smaller items -->
+  <ion-grid>
+    <ion-row>
+
+      <!-- First Column -->
+      <ion-col col-md-12 col-xl-12>
+
+        <!-- Slider Area -->
+        <ion-slides #slides [pager] ="false" [slidesPerView]="tabletMode ? 2 : 1" class="app-slider content-padding" (ionSlideDidChange)="slideChanged()">
+          <ion-slide>
+              <span class="item-category">Top Picks</span>
+              <img src="assets/img/feed-pic-1.jpg" alt="">
+              <div padding class="item-meta">
+                <h1 class="primary-font"><span class="item-price secondary-font">$25</span> | Spicy Chicken Noodles</h1>
+              </div>
+          </ion-slide>
+          <ion-slide>
+              <span class="item-category">Breakfast</span>
+              <img src="assets/img/feed-pic-2.jpg" alt="">
+              <div padding class="item-meta">
+                <h1 class="primary-font"><span class="item-price secondary-font">$50</span> | Naruto Ramen Noodles</h1>
+              </div>
+          </ion-slide>
+          <ion-slide>
+              <span class="item-category">Breakfast</span>
+              <img src="assets/img/feed-pic-3.jpg" alt="">
+              <div padding class="item-meta">
+                <h1 class="primary-font"><span class="item-price secondary-font">$50</span> | Naruto Ramen Noodles</h1>
+              </div>
+          </ion-slide>
+        </ion-slides>
+        <!-- End Slider Area -->
+
+      </ion-col>
+      <!-- End First Column -->
+
+      <!-- Second Column -->
+      <ion-col col-md-12 col-xl-12>
+        <ion-row class="content-padding">
+          <ion-col col-6 col-sm-4 col-md-4 col-lg-2 col-xl-2>
+            <div class="product-item">
+              <img class="rnd-sqr" src="assets/img/mobile-feed-pic-1.jpg" alt="">
+              <div class="meta primary-font">
+                <h6 no-margin><span class="secondary-font">$25</span> | Some Food name</h6>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-6 col-sm-4 col-md-4 col-lg-2 col-xl-2>
+            <div class="product-item">
+              <img class="rnd-sqr" src="assets/img/mobile-feed-pic-2.jpg" alt="">
+              <div class="meta primary-font">
+                <h6 no-margin><span class="secondary-font">$25</span> | Some Food name</h6>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-6 col-sm-4 col-md-4 col-lg-2 col-xl-2>
+            <div class="product-item">
+              <img class="rnd-sqr" src="assets/img/mobile-feed-pic-3.jpg" alt="">
+              <div class="meta primary-font">
+                <h6 no-margin><span class="secondary-font">$25</span> | Some Food name</h6>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-6 col-sm-4 col-md-4 col-lg-2 col-xl-2>
+            <div class="product-item">
+              <img class="rnd-sqr" src="assets/img/mobile-feed-pic-4.jpg" alt="">
+              <div class="meta primary-font">
+                <h6 no-margin><span class="secondary-font">$25</span> | Some Food name</h6>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-6 col-sm-4 col-md-4 col-lg-2 col-xl-2>
+            <div class="product-item">
+              <img class="rnd-sqr" src="assets/img/mobile-feed-pic-5.jpg" alt="">
+              <div class="meta primary-font">
+                <h6 no-margin><span class="secondary-font">$25</span> | Some Food name</h6>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-6 col-sm-4 col-md-4 col-lg-2 col-xl-2>
+            <div class="product-item">
+              <img class="rnd-sqr" src="assets/img/mobile-feed-pic-6.jpg" alt="">
+              <div class="meta primary-font">
+                <h6 no-margin><span class="secondary-font">$25</span> | Some Food name</h6>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <!-- Second Column -->
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

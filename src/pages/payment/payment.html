@@ -1,0 +1,128 @@
+<!--
+  Generated template for the PaymentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="app-default-bar">
+
+  <ion-navbar>
+    <ion-title>Payment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="conditional-padding">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="summary" col-12 col-md-12 col-xl-6>
+          <ion-row>
+            <ion-col col-6 col-sm-12 col-md-6>
+              <h6 no-margin>Total Price</h6>
+              <h2 class="secondary-font">$2,340</h2>
+            </ion-col>
+
+            <ion-col col-6 col-sm-12 col-md-6>
+              <h6 no-margin>Estimated Delivery</h6>
+              <h2 class="secondary-font">May 31 2018</h2>
+            </ion-col>
+
+            <ion-col col-6 col-sm-12 col-md-6>
+              <h6 no-margin>Full Name</h6>
+              <h2 class="secondary-font">Alice Wonderman</h2>
+            </ion-col>
+
+            <ion-col col-6 col-sm-12 col-md-6>
+              <h6 no-margin>Number</h6>
+              <h2 class="secondary-font">08023513230</h2>
+            </ion-col>
+
+            <ion-col col-12 col-sm-12 col-md-6 col-xl-12>
+              <h6 no-margin>Email</h6>
+              <h2 class="secondary-font">alice@wonderland.com</h2>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col class="payment" col-12 col-md-12 col-xl-6>
+          <h6 no-margin class="divider divider-text-left">Shipping Details</h6>
+          <h2 class="secondary-font">John Doe 123 Main Street, San Fransisco, CA 94195</h2>
+
+          <h6 no-margin class="divider divider-text-left">Payment Method</h6>
+          <ion-segment [(ngModel)]="segment" class="ion-segment">
+            <ion-segment-button value="credit-card" icon-left>
+              Mastercard/Credit Card
+            </ion-segment-button>
+            <ion-segment-button value="paypal-others">
+              Paypal/Others
+            </ion-segment-button>
+          </ion-segment>
+
+
+          <div [ngSwitch]="segment" class="app-form">
+
+            <div class="tab-content" *ngSwitchCase="'credit-card'">
+
+                <ion-item>
+                  <ion-label color="primary" stacked>Card Number</ion-label>
+                  <ion-input type="text" placeholder="XXXX XXXX XXXX XXXX"></ion-input>
+                </ion-item>
+
+                  <ion-row>
+                    <ion-col>
+                      <ion-item icon-left>
+                        <ion-label color="primary" stacked>Expiry Month</ion-label>
+                        <ion-select>
+                          <ion-option selected>01 - January</ion-option>
+                          <ion-option>02 - February</ion-option>
+                          <ion-option>03 - March</ion-option>
+                          <ion-option>04 - April</ion-option>
+                          <ion-option>05 - May</ion-option>
+                          <ion-option>06 - June</ion-option>
+                          <ion-option>07 - July</ion-option>
+                          <ion-option>08 - August</ion-option>
+                          <ion-option>09 - September</ion-option>
+                          <ion-option>10 - October</ion-option>
+                          <ion-option>11 - November</ion-option>
+                          <ion-option>12 - December</ion-option>
+                        </ion-select>
+                      </ion-item>
+                    </ion-col>
+                    <ion-col>
+                      <ion-item>
+                        <ion-label color="primary" stacked>Expiry Year</ion-label>
+                        <ion-select>
+                          <ion-option selected>2017</ion-option>
+                          <ion-option>2018</ion-option>
+                          <ion-option>2019</ion-option>
+                        </ion-select>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+
+                  <ion-item icon-left>
+                    <ion-label color="primary" stacked>CVV/CVC</ion-label>
+                    <ion-input type="email" placeholder=""></ion-input>
+                  </ion-item>
+
+            </div>
+
+            <div class="tab-content" *ngSwitchCase="'paypal-others'">
+              <div text-center padding>
+                <button ion-button icon-left><ion-icon name="card"></ion-icon>Pay with Paypal</button>
+              </div>
+            </div>
+
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary" icon-left>
+    <ion-title><ion-icon name="lock"></ion-icon>Secure Pay</ion-title>
+  </ion-toolbar>
+</ion-footer>

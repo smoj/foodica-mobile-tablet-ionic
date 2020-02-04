@@ -1,0 +1,71 @@
+/*
+    App Wide Fonts and various weights
+*/
+
+@font-face {
+    font-family: "Raleway";
+    src: url("../assets/fonts/Raleway-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Raleway Bold";
+    src: url("../assets/fonts/Raleway-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Bitter Light";
+    src: url("../assets/fonts/Bitter-Light.otf") format('opentype');
+}
+
+@font-face {
+    font-family: "Bitter Regular";
+    src: url("../assets/fonts/Bitter-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Bitter SemiBold";
+    src: url("../assets/fonts/Bitter-SemiBold.otf") format('opentype');
+}
+
+@font-face {
+    font-family: "Bitter Bold";
+    src: url("../assets/fonts/Bitter-Bold.ttf") format('truetype');
+}
+
+.primary-font {
+  font-family: "Raleway";
+  &.bold-weight {
+    font-family: "Raleway Bold";
+  }
+  &.light-weight {
+    // No light defined for Raleway
+  }
+  &.semi-bold {
+    // No semi bold fo Raleway
+  }
+}
+
+.secondary-font {
+  font-family: "Bitter Regular";
+
+  &.bold-weight {
+    font-family: "Bitter Bold";
+  }
+  &.light-weight {
+    font-family: "Bitter Light";
+  }
+  &.semi-bold {
+    font-family: "Bitter SemiBold";
+  }
+}
+
+.bold {font-weight:bold;}
+.text-right {text-align: right;}
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.uppercase {text-transform:uppercase;}
+.no-margin {margin:0;}
+.text-ellipsis {
+	text-overflow: ellipsis;
+}
+.no-underline {text-decoration: none;}

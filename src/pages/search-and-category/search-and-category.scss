@@ -1,0 +1,18 @@
+page-search-and-category {
+  .page-title {
+    margin-bottom: 10px;
+    text-indent: 0px;
+  }
+
+  ion-grid,
+  ion-grid ion-row {
+    padding: 0;
+  }
+
+  .pagination.row {
+    @include breakpoint($tablet){
+      margin: 10px 0;
+    }
+  }
+  
+}

@@ -1,0 +1,133 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+
+$sidemenuMinWidth : 200px;
+$sidemenuMaxWidth : 300px;
+
+$split-pane-ios-side-min-width : $sidemenuMinWidth;
+$split-pane-ios-side-max-width : $sidemenuMaxWidth;
+$split-pane-md-side-min-width : $sidemenuMinWidth;
+$split-pane-md-side-max-width : $sidemenuMaxWidth;
+$split-pane-wp-side-min-width : $sidemenuMinWidth;
+$split-pane-wp-side-max-width : $sidemenuMaxWidth;
+
+$toolbar-app-height : 60px;
+$toolbar-ios-height : $toolbar-app-height;
+$toolbar-md-height : $toolbar-app-height;
+$toolbar-wp-height : $toolbar-app-height;
+
+$toolbar-font-size : 1.4em;
+$toolbar-ios-title-font-size : $toolbar-font-size;
+$toolbar-md-title-font-size : $toolbar-font-size;
+$toolbar-wp-title-font-size : $toolbar-font-size;
+
+$segment-button-ios-background-color : #f7f7f7;
+$segment-button-md-background-color : #f7f7f7;
+$segment-button-wp-background-color : #f7f7f7;
+
+$segment-button-ios-background-color-activated : color($colors, primary);
+$segment-button-md-background-color-activated : color($colors, primary);
+$segment-button-wp-background-color-activated : color($colors, primary);
+
+$segment-button-ios-border-width : 0;
+$segment-button-md-border-width : 0;
+$segment-button-wp-border-width : 0;
+
+$segment-button-md-text-color : #fff;
+$segment-button-wp-text-color : #fff;
+$segment-button-ios-text-color : #fff;
+
+$segment-button-ios-height : 40px;
+$segment-button-md-height : 40px;
+$segment-button-wp-height : 40px;
+
+$segment-button-ios-line-height : 4rem;
+$segment-button-md-line-height : 4rem;
+$segment-button-wp-line-height : 4rem;

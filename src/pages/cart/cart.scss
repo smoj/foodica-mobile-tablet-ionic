@@ -1,0 +1,91 @@
+page-cart {
+  .conditional-padding {
+    @include breakpoint(min-width $tablet) {
+      padding: 26px;
+    }
+  }
+  .extra-charges {
+    color: black;
+    margin-right: 26px !important;
+  }
+  .app-title {
+    text-indent: 16px;
+    margin: 22px 0 10px 0;
+    @extend .primary-font;
+  }
+  .sub-total {
+    @include breakpoint(min-width $iPad){
+      text-align: right;
+      padding: 0 16px;
+    }
+  }
+  ion-grid.grid,
+  ion-grid.grid ion-row,
+  ion-grid.grid ion-row ion-col {
+    padding: 0;
+  }
+
+  ion-list.cart {
+    &.list-ios, &.list-md {
+      ion-item-sliding > ion-item {
+        @extend .primary-font;
+        border-bottom: 1px solid #ccc;
+
+        div.item-inner {
+          border-bottom: none;
+        }
+        &.item-ios, &.item-md {
+          align-items: start;
+        }
+        h1 {
+          font-size: 2rem;
+          white-space: normal;
+        }
+        ion-badge {
+          // &:first-of-type {
+          //   margin-right: 10px;
+          // }
+          // &:last-of-type {
+          //   margin-left: 10px;
+          // }
+        }
+        p {
+          margin: 5px 0;
+          @include breakpoint(min-width $iphone6Plus){
+            margin-top: 10px;
+          }
+        }
+      }
+
+      ion-item-sliding > ion-item > ion-avatar {
+        margin-top: 17px;
+        min-width: 60px;
+        min-height: 60px;
+        border: 5px solid #eaeaea;
+        img {
+          width: 60px;
+          height: 60px;
+          border-radius: 5px;
+        }
+      }
+
+      .hide-on-mobile {
+        @include breakpoint(max-width $iphone6Plus){
+          display: none;
+        }
+      }
+    }
+  }
+  .shipping {
+    background: #eaeaea;
+    padding: 16px;
+    margin: 16px;
+    border-radius : 7px;
+  }
+
+  .toolbar-ios ion-title,
+  .toolbar-md ion-title {
+    padding : 0;
+    @extend .secondary-font;
+  }
+}

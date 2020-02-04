@@ -1,0 +1,82 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content padding class="no-scroll">
+<ion-grid class="form-content">
+  <ion-row>
+    <ion-col class="app-meta" align-self-center col-12 col-sm col-sm-4 offset-sm-2 col-md-5 offset-md-1>
+      <img src="http://placehold.it/50x50" alt="">
+      <h1 class="app-title secondary-font">Foodica</h1>
+      <p class="app-description">Ionic Template for Takeouts and Food recipie apps</p>
+    </ion-col>
+    <ion-col col-12 col-sm col-sm-4 col-md-5>
+      <div class="section">
+
+
+          <ion-segment [(ngModel)]="segment" class="ion-segment">
+            <ion-segment-button value="login">
+              Login
+            </ion-segment-button>
+            <ion-segment-button value="register">
+              Register
+            </ion-segment-button>
+          </ion-segment>
+
+
+          <div [ngSwitch]="segment" class="app-form">
+
+            <div *ngSwitchCase="'login'" padding>
+              <h5 class="form-instructions">Supply your login details</h5>
+              <ion-list no-lines>
+
+                <ion-item>
+                  <ion-label fixed><ion-icon name="md-contact"></ion-icon> User</ion-label>
+                  <ion-input type="text" value=""></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label fixed><ion-icon name="md-lock"></ion-icon> Password</ion-label>
+                  <ion-input type="password"></ion-input>
+                </ion-item>
+
+              </ion-list>
+              <button ion-button full (click)="gotoHome()">Login</button>
+            </div>
+
+            <div *ngSwitchCase="'register'" padding>
+              <h5 class="form-instructions">Register your email/password</h5>
+              <ion-list no-lines>
+
+                <ion-item>
+                  <ion-label fixed><ion-icon name="md-mail"></ion-icon> Email</ion-label>
+                  <ion-input type="text" value=""></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label fixed><ion-icon name="md-lock"></ion-icon> Password</ion-label>
+                  <ion-input type="password"></ion-input>
+                </ion-item>
+
+              </ion-list>
+              <button ion-button full>Register</button>
+            </div>
+
+          </div>
+
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

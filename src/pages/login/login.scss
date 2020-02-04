@@ -1,0 +1,82 @@
+page-login {
+  @extend .primary-font;
+  ion-content {
+    background: url('../assets/img/login-bg.jpg') no-repeat;
+    background-size: cover;
+  }
+  .form-content {
+    @include breakpoint($aboveMobile){
+      margin: 25% 0;
+    }
+    @include breakpoint($laptop){
+      margin: 15% 0;
+    }
+  }
+
+  .app-meta {
+    color : white;
+    text-align: left;
+
+    @include breakpoint(max-width $iphone6Plus){
+      // text-align: center;
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+
+    @include breakpoint(max-width $iphone5s){
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .app-title, .app-description {
+    color : #fff;
+  }
+  .app-title {
+    @include breakpoint($aboveMobile){
+      font-size: 3.5rem;
+    }
+    // @include breakpoint($laptop){
+    //   font-size: 4.5rem;
+    // }
+  }
+  .app-description {
+    @include breakpoint($aboveMobile){
+      font-size: 1.8rem;
+      line-height: 3rem;
+      margin-top: 5px;
+    }
+    // @include breakpoint($laptop){
+    //   font-size: 2.5rem;
+    // }
+  }
+
+  ion-segment-button {
+    &.segment-ios, &.segment-md {
+
+    }
+  }
+
+  ion-list .item {
+    @include breakpoint($iphone5s){
+      margin: 0;
+    }
+    @include breakpoint($iphone6){
+      margin-bottom: 10px;
+    }
+  }
+
+  .no-scroll .scroll-content{
+    overflow: hidden;
+  }
+  
+  .section {
+    background: white;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    img {
+      width: 100%;
+    }
+  }
+}

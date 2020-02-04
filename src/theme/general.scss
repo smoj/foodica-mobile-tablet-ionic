@@ -1,0 +1,275 @@
+button[ion-button] {
+  @extend .primary-font;
+}
+// General Slider
+.app-slider {
+  height: auto;
+  ion-slide.swiper-slide {
+    align-items: flex-start;
+    .item-price {font-weight: bold;}
+    .item-category {
+      position: absolute;
+      top: 20px;
+      left: 15px;
+      background: rgba(46, 46, 46, 0.6);
+      padding: 9px 19px 11px 19px;
+      border-radius: 500px;
+      color: #fff;
+      @include breakpoint($iphone5s) {
+        font-size: 1.3rem;
+        top: 12px;
+        left: 8px;
+        padding: 6px 10px 8px 10px;
+        border-radius: 6px;
+      }
+      @include breakpoint($tablet) {
+        font-size: 1.6rem;
+      }
+    }
+    .item-meta {
+      background: red;
+      color: white;
+      text-align: left;
+      h1 {
+        @include breakpoint($iphone5s) {
+          font-size: 2rem;
+        }
+        @include breakpoint($tablet) {
+          font-size: 3rem;
+        }
+      }
+      p {
+        font-size: 75%;
+        @include breakpoint($tablet){
+
+        }
+      }
+    }
+    .slide-zoom img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.product-item {
+  position: relative;
+  img {
+    display: block;
+  }
+  .meta {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 6px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    @include breakpoint($iphone5s){
+      padding: 10px;
+      font-size: 75%;
+    }
+  }
+}
+
+/*
+  Content Padding to top level children in ion-content
+  Adds padding for tablet devices, removes padding for mobile
+*/
+ion-row.content-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+  @include breakpoint($tablet) {
+    margin-top: 10px;
+  }
+  ion-col img {
+    width: 100%;
+  }
+}
+
+.rnd-sqr {
+  border-radius: 8px;
+}
+
+.content-padding {
+  @include breakpoint($iphone5s) {
+    padding: 0;
+  }
+  @include breakpoint($tablet) {
+    padding: 16px;
+  }
+}
+
+/*
+  Page Title - Great use for Tablet Views.
+  use the .hide-on-mobile to hide on mobile.
+*/
+.page-title {
+  text-indent: 26px;
+
+  @include breakpoint($iphone5s) {
+    margin: 2rem 0 1rem 0;
+  }
+
+  @include breakpoint($tablet) {
+    margin: 2rem 0 0 0;
+    font-size: 3rem;
+  }
+
+  &.hide-on-mobile {
+    @include breakpoint($mobile-only) {
+      display: none;
+    }
+  }
+
+}
+
+
+// Default Styling for all navbars
+.app-default-bar {
+  .toolbar-content ion-title {
+    background: #f9f9f9 !important;
+    .toolbar-title-ios,
+    .toolbar-title-md,
+    .toolbar-title-wp {
+      color: #8a8a8a !important;
+      text-shadow: none !important;
+      @extend .primary-font;
+    }
+  }
+}
+
+// Sidemenu Style
+.foodica-sidemenu {
+  @extend .primary-font;
+  background:url('../assets/img/sidebar-bg.jpg') no-repeat;
+  .md .menu-inner,
+  .ios .menu-inner,
+  .menu-inner, .menu-inner ion-content {
+    background: transparent;
+    .foodica-menu--profile {
+  		padding:30px;
+      h1,h2,h3,h4,h5,h6 {
+        margin: 5px 0;
+        color: white !important;
+      }
+  	}
+  }
+  .list-md,
+  .list-ios, {
+    background: transparent;
+    color: white;
+    margin-left: 13px;
+  }
+
+  .item-ios, .item-md {
+    background: transparent;
+    color: white;
+    font-size: 1.4em;
+    ion-icon[item-start] + .item-inner {
+      margin-left: 12px;
+    }
+    ion-badge {
+      width: 30px;
+      height: 30px;
+      border-radius: 500px;
+      line-height: 21px;
+      text-align: center;
+      display: block;
+    }
+  }
+}
+
+.searchbar {
+  @extend .primary-font;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 110%;
+  margin: 10px 0;
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgba(255, 255, 255, 0.4);
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: rgba(255, 255, 255, 0.4);
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: rgba(255, 255, 255, 0.4);
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+// App wide divider. Super versatile I tell ya!
+.divider, .app-divider {
+        margin:10px auto;
+        overflow:hidden;
+        text-align:center;
+        line-height:1.2em;
+
+        &:before,&:after{
+        	content:"";
+	        vertical-align:top;
+	        display:inline-block;
+	        width:50%;
+	        height:0.65em;
+	        border-bottom:1px solid #ccc;
+	        margin:0 2% 0 -55%;
+        }
+        &:after {
+        	margin:0 -55% 0 2%;
+        }
+
+        &.divider-text-left {
+        	position: relative;
+        	text-align: left;
+        	&:after {
+        		width: 74%;
+        	}
+        	&:before {
+        		display: none;
+        	}
+        }
+
+        &.divider-text-right {
+        	position: relative;
+        	text-align: right;
+        	&:before {
+        		width: 74%;
+        	}
+        	&:after {
+        		display: none;
+        	}
+        }
+    }
+
+
+    .app-form {
+      h1,h2,h3,h4,h5,h6 {
+        text-indent: 16px;
+        margin-bottom: 2rem;
+        &.form-instructions {
+          @include breakpoint($iphone5s){
+            // text-align: center;
+            margin: 0;
+          }
+          @include breakpoint($iphone6){
+            margin-bottom: 3rem;
+            margin-top: 2rem;
+          }
+        }
+      }
+      ion-label ion-icon {
+        padding-right: 5px;
+        color: transparentize(#000, 0.5);
+      }
+      .text-input, ion-input {
+        background: #f1f1f1;
+        border-radius: 5px;
+      }
+    }

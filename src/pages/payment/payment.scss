@@ -1,0 +1,47 @@
+page-payment {
+  @extend .primary-font;
+  .conditional-padding {
+    padding: 8px;
+    @include breakpoint(min-width $tablet){
+      padding: 26px;
+    }
+  }
+  .divider {
+    margin-bottom: 15px;
+  }
+  h2 {
+    margin: 8px 0 16px 0;
+    color: transparentize(black, 0.3);
+    @include breakpoint(max-width $iPad){
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+  }
+  .tab-content {
+    background: #f9f9f9;
+    ion-item {
+      &.item-ios, &.item-md {
+        background: none;
+      }
+    }
+  }
+  .app-form {
+    ion-input {
+      text-indent: 10px;
+      background: none;
+      input.text-input-md,
+      input.text-input-ios {
+        background: none;
+      }
+    }
+    ion-row {
+      padding: 0;
+    }
+    ion-col ion-item {
+      &.item-ios, &.item-md {
+        padding-left: 13px;
+        background: none;
+      }
+    }
+  }
+}

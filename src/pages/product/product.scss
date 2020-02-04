@@ -1,0 +1,68 @@
+page-product {
+  .page-title {
+    text-indent: 0;
+    position: relative;
+    @include breakpoint($tablet){
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .order-btn {
+    padding: 10px 17px;
+    background: red;
+    border-radius: 20px;
+    transition: none;
+    color: white;
+    font-size: 1.5em;
+  }
+  ion-grid.product {
+    padding: 0;
+  }
+
+  span.tag {
+    @extend .primary-font;
+    background: grey;
+    padding: 7px 16px;
+    border-radius: 34px;
+    margin: 4px 0px;
+    display: inline-block;
+    color: white;
+    @include breakpoint($iphone5s){
+      font-size: 70%;
+    }
+  }
+
+  .product-meta, .product-content {
+    padding: 0 26px;
+    P:first-of-type{
+      margin-top: 0;
+    }
+  }
+
+  .product-content {
+    @include breakpoint($tablet){
+      margin-top: 3rem;
+    }
+  }
+
+  .product-item {
+    img.rnd-sqr {
+      width: 100%;
+    }
+  }
+
+  .product-meta {
+    @include breakpoint($iphone5s){
+      text-align: center;
+    }
+    @include breakpoint($tablet){
+      text-align: left;
+    }
+  }
+
+  .product-content {
+    font-size: 1.7rem;
+    line-height: 1.7em;
+  }
+}

@@ -1,0 +1,12 @@
+// Device Resolutions (For Breakpoint)
+$iphone5s: 320px;
+$iphone6: 375px;
+$iphone6Plus: 414px;
+$tablet : 1010px;
+$iPad : 768px;
+$verySmallMobile : max-width $iphone5s;
+$mobile-only : max-width $iphone6Plus;
+$aboveMobile : min-width $iPad;
+$laptop : min-width $tablet;
+// $tabletPortrait : (min-width $tablet) (orientation portrait);
+// $iPadPortrait
